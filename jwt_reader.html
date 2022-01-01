@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JWT READER</title>
+
+    <!-- BOOTSTRAP v.5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- ----- TOKEN FORM ----- -->
+        <div class="row mt-5">
+            <h4 class="mb-2">Descifrar el payload y la fecha de creación o expiración de un token</h4>
+
+            <form id="token_form" class="form" action="javascript:void(0);">
+                <label class="mb-2" for="token_input">Escribir el token: </label>
+                <br>
+                <input class="mb-3" type="text" name="token_input" id="token_input" required>
+                <br>
+                <button class="btn btn-primary" type="submit">Descifrar token</button>
+            </form>
+        </div>
+
+        <!-- PAYLOAD OUTPUT -->
+        <div class="row mt-5">
+            <div id="payload"></div>
+        </div>
+
+        <!-- ----- UNIX TIME FORM ----- -->
+        <div class="row mt-5">
+            <h4 class="mb-2">Convertir la fecha de creación o expiración del token, para verla en un formato local</h4>
+
+            <form id="unix_time_form" class="form" action="javascript:void(0);">
+                <label class="mb-2" for="unix_time_input">Escribir la fecha en formato UNIX: </label>
+                <br>
+                <input class="mb-3" type="text" name="unix_time_input" id="unix_time_input" required>
+                <br>
+                <button class="btn btn-primary" type="submit">Mostrar fecha</button>
+            </form>
+        </div>
+
+        <!-- DATE OUTPUT -->
+        <div class="row mt-4">
+            <div id="date"></div>
+        </div>
+
+    </div>
+
+
+    <!-- BOOTSTRAP v.5.0.2 + POPPER -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script><!-- BOOTSTRAP v.5.0.2 -->
+
+    <!-- JQUERY v.3.6.0 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+    <!-- CUSTOM JS -->
+    <script src="jwt_reader.js"></script>
+
+</body>
+
+</html>
